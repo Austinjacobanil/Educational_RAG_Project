@@ -1,0 +1,5 @@
+id,title,path,modality,competencies,difficulty,style_tags,learning_objectives
+c1,What is Big-O?,sample_data\Big_O.pdf,pdf,"time_complexity;asymptotics",1,"read;visual","Explain time complexity and asymptotic notation basics"
+c2,Asymptotics Article,sample_data\AsymptoticNotations.txt,text,"asymptotics",1,"read;examples","Compare different asymptotic growth rates"
+c3,Software Engineering,sample_data/SoftwareEngineering.txt,text,"software_engineering;recurrence",2,"read;visual","Describe the divide-and-conquer paradigm"
+c4,Master Theorem Notes,sample_data/master_theorem.txt,text,"recurrence;master_theorem",3,"read;practice","Apply the Master Theorem to solve recurrences"

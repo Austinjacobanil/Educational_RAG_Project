@@ -1,0 +1,6 @@
+What is Master's theorem?
+Masters theorem is one of the many methods that are applied to calculate time complexities of algorithms. In analysis, time complexities are calculated to find out the best optimal logic of an algorithm. Masters theorem is applied on recurrence relations.
+
+But before we get deep into the masters theorem, let us first revise what recurrence relations are −
+
+Recurrence relations are equations that define the sequence of elements in which a term is a function of its preceding term. In algorithm analysis, the recurrence relations are usually formed when loops are present in an algorithm.

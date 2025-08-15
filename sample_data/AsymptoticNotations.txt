@@ -1,0 +1,230 @@
+Asymptotic Notations - GATE Bits in PDF 
+Asymptotic Notations is an important chapter in Design and Analysis of Algorithms, 
+which carries over to bigger topics later on. It is useful for all of Algorithms in GATE CS, 
+BARC, BSNL, DRDO, ISRO, and other exams. These GATE Bits on Asymptotic Notations 
+can be downloaded in PDF for your reference any time. Use these GATE Study Notes to 
+help you ace any exam. 
+When we compare the relative performance of alternative algorithms to solve same 
+problem, we do not need exact time or space respectively. (we are permitted to be little 
+sloppy). 
+Analysis is meaningful only when the input size is large. Assume two algorithms A1 and 
+A2 are proposed to solve a particular problem. and  
+TA1(n) = 100n2 + 106n 
+TA2(n) = n3 
+Now at first sight it might appear that A2 is better compared to A1, but for large input 
+size (n) only the order of growth is relevant.  
+Hence A1 wins over A2, because we will say time complexity of A1 is order of n2 and 
+time complexity of A2 is order of n3.  
+To depict time and space complexities of an algorithm asymptotically (approximately) 
+we require asymptotic notations. 
+Asymptotic Notations  
+i) Big – O (O)   
+After analysing an algorithm A, if one says  
+TA(n) = O(n2) 
+He means that algorithm will be completed within cn2 time for a sufficiently large n.  
+Hence big – O given upper bound but this upper bound may or may not be the tightest.   
+Hence 
+If TA = O(n2) then  
+TA = O(n3) 
+TA = O(n4) 
+In fact T = On  
+[but it does NOT mean O(n2) = O(n3) = O(n4) …] 
+But first statement is more meaningful   
+In fact, it means n2 ϵ O(n3) 
+Set definition O notation  
+O(g(n)) = {f(n) ∃ c > 0,  n0 > 0 such that 0 ≤ f(n) ≤ cg(n), ∀ n ≥ n0} 
+Hence set O(g(n)) is the umbrella under which all asymptotically smaller functions will reside 
+Example for O(n4)  
+n ϵ O(n4) 
+n2 ϵ O(n4) 
+n3 ϵ O(n4) etc.. 
+Also, f(n) = n2 + O(n3)  
+means  
+f(n) = n2 + g(n) 
+where g(n) ϵ O(n3) 
+f(n) = O(g(n)) 
+After n = n0 f(n) will never catch c.g(n) where c is a constant  
+By writing f(n) = O(g(n)) we mean that a function f(n) is a member of set O(g(n)) 
+Since O notation describes an upper bound, it can be used to bound the worst case 
+running time of an algorithm.   
+Hence it is meaningful to say that running time of insertion sort is O(n2), though we can 
+also say O(n3), because again big –O need not provide tightest upper bound. [It may or 
+may not be tightest]. 
+ii. Small–o  
+Big –O notation is like ≤   
+f(n) ≤ g(n) when f(n) = O(g(n)) 
+small – o notation is like <  
+f(n) < g(n) when f(n) = o(g(n)) 
+The asymptotic upper bound provided by O – notation may or may not be 
+asymptotically tight.  
+Small – o is used to denote an upper bound that is NOT asymptotically tight.  
+o(g(n)) = {f(n): for any positive constant c > 0, n0 > 0, 0 ≤ f(n) < cg(n) ∀ n>n0} 
+Example 
+3n = o(n2), but 2n2 ≠ o(n2) 
+logn = o(n), but log n ≠ o(100 logn)  
+Therefore, when  
+f(n) = o(g(n)) and n approaches infinity 
+→∝ ( )
+ ( )
+ =0 
+iii. Omega (Ω)  
+Ω notation is used to provide an asymptotic lower bound. 
+Ω(g(n)) is the set of functions  
+Ω(g(n)) = {f(n): ∃ c > 0 and n0 such that 0 ≤ c.g(n) ≤ f(n), for all n ≥n0}  
+f(n) = Ω(g(n)) 
+As Ω notation describes a lower bound, it is used to bound the best case running time of 
+an algorithm.  
+Example:  
+If T(n)denotes the running time of the insertion sort on input – size n, then we can say 
+that T(n) = Ω(n) as insertion sort takes linear time in best case. 
+Remember in practice we use O and Ω notations to tight upper and lower bounds 
+respectively otherwise for any function T(n)both the following statements are TRUE. 
+T(n) = Ω(0) 
+T(n) = O(∞) 
+Which means any algorithm will take at least zero time and at most infinity time to 
+compute.   
+iv. Little –Omega (ω)  
+ω –nation is used to denote a lower bound that is not asymptotically tight.  
+Hence ω(g(n)) is the set  
+ω(g(n)) = {f(n): ∃ positive C, n0 > 0 such that 0 ≤ C g(n) < f(n) for all n ≥n0} 
+Ω-notation is like ≥ where us ω notation is like >  
+Hence  
+√
+ = (lg ) √ ≠ √  
+v. Theta-Notation (θ)  
+If two functions f(n)and g(n)are of same order, then  
+f(n) = θ(g(n)) 
+we say that g(n) is an asymptotically tight bound for f(n)  
+θ(g(n)) the set of functions θ(g(n)) = {f(n): ∃ c1 , c2 >0 
+which means  
+and n0 s.t. 0 ≤ c1 g(n) ≤ f(n) ≤ c2 g(n) for all n ≥ n0} 
+θ(g(n)) = O(g(n)) ∩ Ω(g(n)) 
+Hence depending upon the value of  
+c, c g(n) can be the tightest upper and lower bound of f(n)  
+Example: 
+Assume that in the Best Case, Average case and worst case time required by an 
+algorithm A is 100n, 50nlogn and 10n2 respectively and assume we represent time 
+complexity of A as TA(n) 
+Then All of the following statements are TRUE. 
+T(n) = O(n2) 
+T(n) = Ω(n) 
+T(n) = o(n3) 
+T(n) = ω(√n)  
+Example: 
+As we know that no matter what the input is mergesort always takes c.nlogn time. 
+Assume T(n) represents T.C. of mergesort then  
+T(n) = O(nlogn) 
+T(n) = Ω(nlogn) 
+Hence 
+T(n) = θ(nlogn) 
+Hence depending upon the behaviour of the algorithm on different inputs we use the 
+most expressive and meaningful notation to represent complexity of an algorithm 
+Following statement about time complexity of mergesort are also correct but do not 
+make much sense:  
+T(n) = O(n2) 
+T(n) = o(n2) 
+T(n) = ω(n) 
+T(n) = Ω(n) 
+Now Try It Yourself 
+1. Which of the following set is empty? 
+(1)  
+( )
+ (2)  
+( ) 
+( ) Ω ( ) 
+(3) 
+(4) 
+( )
+ ( ) 
+( ) ∩Ω ( ) 
+2. Assume ( ) denotes the time complexity of merge sort algorithm which of the 
+following statements is/are correct? 
+(i) ( )= ( log ) 
+(ii) ( ) = ( log ) 
+(iii) ( ) = ( log ) 
+(iv) ( ) = ( ) 
+(1) i and iii only 
+(2) ii and iii only 
+(3) i and iv only 
+(4) ii, iii and iv only 
+3. Identify the FALSE statement: 
+(1) ( ) = 
+(2) ( ) = 
+(3) ( ) = 
+( ) 
+( )  
+(4) ( )+ ( )=
+ ( )=
+ lg ( ) =
+ 2 ( ) = 2 ( ) 
+( ) 
+( ), ( ) 
+4. Given f(n) = ω(n2). Which of the following can never hold? 
+(1) f(n) = O (n3) 
+(2) f(n) = Ω (n2) 
+(3) f(n) = θ (n2) 
+(4) f(n) = ω (n) 
+5. Which of the following can never hold? 
+(1) n3 + Ω (n2) = O (n4) 
+(2) n + θ (n2) = Ω (n) 
+(3) n2 + O (n2) = θ (n3) 
+(4) n3  + O(n3) = O (n4) 
+6. Assume f(n) and g(n) are two functions such that f(n) = O (g(n)). Which of the 
+following will always hold? 
+(1) ( ) =  
+( ) 
+(2) ( ) = Ω ( ) 
+(3) ( ) = 
+( ) 
+(4) ( ) = Ω ( ) 
+7. Which of the following arrangements of functions is in ascending order of growth 
+rate. That is if g(n) follows f(n) than it should be the case that f(n) is O(g(n)). 
+(1) log
+ , log(log ),2
+ (2) (log ) ,
+ (3) √
+ (4) 2
+ , 2
+ , 
+, √
+ , 2
+ . (log ) , 
+, (log ) ,
+ , 
+, 
+log 
+log 
+(answers & solutions at the end) 
+Liked this article on Asymptotic Notations? Let us know in the comments. You may also 
+like... 
+Theory of Computation 
+Rank of a Matrix & Its Properties 
+Eigen Values & Eigen Vectors 
+Linear Algebra Short Quiz 
+ANSWERS & SOLUTIONS to TRY IT YOURSELF QUESTIONS 
+Ans 1: 1 
+Solution: There does not exist any function ( ) such 
+that ( )
+ ( ) and ( ) ( ) at the same time. 
+Both the sets in option(A) are mutually exclusive. 
+Ans 2: 4 
+Solution: we know that time complexity of Merge Sort is ( log ) hence all statements 
+are valid except i, because little-oh notation is used to give non-tightest upper bound. 
+Statement (iv) is true because of the fact that if merge sort can be performed in nlogn 
+time than it can definitely be performed in O(n2),this statement may not be very useful 
+though. 
+Remember: Upper bound means "cannot be asymptotically worse than". Therefore all 
+algorithms are O(∞). Lower bound means "cannot be asymptotically better than". So all 
+algorithms are Ω(0). 
+Ans 3: 3  
+. 
+3 = ( )  2 ≠ (2 ) 
+Ans 4: 3 
+Solution: Statement C can never hold because if tight bounds are Ω(n2) and O(n2) then 
+ω(n2) can never be the non-tightest lower bound. 
+Ans 5: 3 
+Solution: Statements A, B and D can hold but Statement C can never hold. 
+Ans 6: 4 
+Solution: Assume ( ) = 
+Ans 7: 4 
+then option ‘A’ will not hold.

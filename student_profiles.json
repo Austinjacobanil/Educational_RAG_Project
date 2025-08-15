@@ -1,0 +1,13 @@
+{
+  "name": "Student",
+  "level": "beginner",
+  "learning_style": "visual",
+  "completed_topics": [],
+  "mastery": {
+    "time_complexity": 0.6619999999999999,
+    "asymptotics": 0.6619999999999999,
+    "software_engineering": 0.6619999999999999,
+    "recurrence": 0.2,
+    "master_theorem": 0.97450841496875
+  }
+}
